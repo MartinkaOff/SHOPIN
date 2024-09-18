@@ -5,7 +5,7 @@ import instagram from "../../assets/instagram.svg";
 
 export const Header = () => {
 	return (
-		<div className="flex mt-[32px] justify-between">
+		<div className="flex my-[32px] justify-between">
 			<div>
 				<img src={logo} alt="logo" />
 			</div>
