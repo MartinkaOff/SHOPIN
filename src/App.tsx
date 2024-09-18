@@ -1,9 +1,15 @@
-import { MainPage } from "./pages/mainPage/MainPage";
+import { MainPage } from "./pages/Main/MainPage";
+import { Catalog } from "./pages/Catalog/Catalog";
 
 import "./App.css";
 
 function App() {
-	return <MainPage />;
+	return (
+		<>
+			<MainPage />
+			<Catalog />
+		</>
+	);
 }
 
 export default App;

@@ -21,11 +21,3 @@ export const cards = [
     },
     
 ]
-
-export const cards1 = [...cards];
-const secondCard = cards1.splice(1, 1)[0];
-cards1.unshift(secondCard);
-
-export const cards2 = [...cards];
-const thirdCard = cards2.splice(2, 1)[0];
-cards2.unshift(thirdCard);
