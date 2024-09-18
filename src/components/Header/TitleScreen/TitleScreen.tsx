@@ -2,7 +2,7 @@ export const TitleScreen = () => {
 	return (
 		<div className="bg">
 			<div className="bg-radial-gradient h-[700px] w-full text-center flex flex-col items-center p-[165px]">
-				<div className=" text-[72px] text-white font-bold leading-none">
+				<div className=" text-[62px] text-white font-bold leading-none">
 					Создайте успешный бизнес с нашими сайтами
 				</div>
 				<div className="w-[540px] text-[20px] text-white mt-[32px]">
