@@ -4,7 +4,7 @@ import { Header } from "../../components/Header/Header";
 
 export const Catalog = () => {
 	return (
-		<div>
+		<div className="w-full">
 			<Header />
 			<CatalogComponent />
 			<Footer />

@@ -6,13 +6,13 @@ import PrimeBusiness700x500 from "../../assets/aboutImg/PrimeBusiness700x500.png
 
 export const AboutComponent = () => {
 	return (
-		<div>
-			<div className="text-[62px] font-bold leading-none w-[920px] mx-auto mt-[80px] text-center">
+		<div className="w-full">
+			<div className="text-[24px] min-[768px]:text-[62px] font-bold leading-none min-[768px]:w-[920px] mx-auto mt-[32px] min-[768px]:mt-[80px] text-center">
 				Создаем сайты, которые делают ваш бизнес успешным
 			</div>
 
 			<div>
-				<div className="mt-[120px]">
+				<div className="mt-[60px] min-[768px]:mt-[120px]">
 					<SiteCard
 						img={EliteWebPro700x500}
 						title="Lorem ipsum dolor sit amet consectetur. Odio vestibulum id habitant in cras."

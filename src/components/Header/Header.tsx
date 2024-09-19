@@ -6,33 +6,73 @@ import burger from "../../assets/burger.svg";
 import closeBurger from "../../assets/closeBurger.svg";
 import { useState } from "react";
 import { Burger } from "../Burger/Burger";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 export const Header = () => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
+
+	const [searchParams] = useSearchParams();
+
+	const navigate = useNavigate();
 
 	const handleBurgerOpen = () => {
 		setBurgerOpen(!burgerOpen);
 	};
 
+	const paramValue = searchParams.get("param");
+
+	const linkClick = (url: string, param: string) => {
+		navigate(`/${url}?param=${param}`);
+	};
+
 	return (
-		<div className="w-full flex my-[32px] justify-between relative max-[768px]:my-[15px]">
-			<div onClick={handleBurgerOpen}>
+		<div className="w-full flex my-[32px] justify-between relative max-[768px]:mt-[0px] max-[768px]:mb-[32px]">
+			<div className="min-[1024px]:hidden" onClick={handleBurgerOpen}>
 				<img
 					src={burgerOpen ? closeBurger : burger}
 					alt={burgerOpen ? closeBurger : burger}
 				/>
 			</div>
-			<div>
+			<Link to={"/"}>
 				<img src={logo} alt="logo" />
-			</div>
+			</Link>
 			<div className="hidden min-[1024px]:flex">
-				<div className="mr-[32px] text-[18px]">Бизнес-сайты</div>
-				<div className="mr-[32px] text-[18px]">Персональные сайты</div>
-				<div className="mr-[32px] text-[18px]">Интернет-магазины</div>
-				<div className="text-[18px]">Одностраничные сайты</div>
+				<div
+					onClick={() => linkClick("catalog", "business")}
+					className="mr-[32px] text-[18px]"
+				>
+					Бизнес-сайты
+				</div>
+				<div
+					onClick={() => linkClick("catalog", "personal")}
+					className="mr-[32px] text-[18px]"
+				>
+					Персональные сайты
+				</div>
+				<div
+					onClick={() => linkClick("catalog", "shop")}
+					className="mr-[32px] text-[18px]"
+				>
+					Интернет-магазины
+				</div>
+				<div
+					onClick={() => linkClick("catalog", "single")}
+					className="mr-[32px] text-[18px]"
+				>
+					Одностраничные сайты
+				</div>
+				<Link to={"/about"} className="text-[18px]">
+					О нас
+				</Link>
 			</div>
 
-			{burgerOpen ? <Burger /> : undefined}
+			{burgerOpen ? (
+				<Burger
+					linkClick={linkClick}
+					paramValue={paramValue}
+					setBurgerOpen={setBurgerOpen}
+				/>
+			) : undefined}
 
 			<div className="flex gap-[24px]">
 				<div>

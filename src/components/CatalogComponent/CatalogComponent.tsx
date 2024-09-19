@@ -1,9 +1,24 @@
 import { useState } from "react";
 import { cards } from "../../services/bestsellersCards";
 import { CardsRender } from "../CardsRender/CardsRender";
+import { useSearchParams } from "react-router-dom";
 
 export const CatalogComponent = () => {
 	const numbersPage = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+	const [searchParams] = useSearchParams();
+
+	const paramValue = searchParams.get("param");
+
+	const paramValueText = () => {
+		return paramValue === "business"
+			? "Бизнес-сайты"
+			: paramValue === "personal"
+			? "Персональные сайты"
+			: paramValue === "shop"
+			? "Интернет-магазины"
+			: "Одностраничные сайты";
+	};
 
 	const [showAll, setShowAll] = useState(false);
 	const [active, setActive] = useState(1);
@@ -17,10 +32,10 @@ export const CatalogComponent = () => {
 	return (
 		<div>
 			<div>
-				<div className="title32px text-left">Бизнес-сайты</div>
+				<div className="title32px text-left">{paramValueText()}</div>
 				<div className="w-[541px]">
-					"Бизнес-сайты" — готовые решения для создания профессиональных
-					страниц, которые помогут продвигать ваш бренд и увеличивать продажи
+					{`${paramValueText()} — готовые решения для создания профессиональных
+					страниц, которые помогут продвигать ваш бренд и увеличивать продажи`}
 				</div>
 				<div className="flex justify-between mt-[40px]">
 					<div>

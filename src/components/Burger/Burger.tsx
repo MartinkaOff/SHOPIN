@@ -1,50 +1,64 @@
 import whatsapp from "../../assets/whatsapp.svg";
 import telegram from "../../assets/telegram.svg";
 import instagram from "../../assets/instagram.svg";
-import { useState } from "react";
+import { FC } from "react";
 
-export const Burger = () => {
-	const [active, setActive] = useState(0);
+interface IBurger {
+	linkClick: (url: string, param: string) => void;
+	paramValue: string | null;
+	setBurgerOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+export const Burger: FC<IBurger> = ({
+	linkClick,
+	paramValue,
+	setBurgerOpen,
+}) => {
 	return (
 		<div className="fixed z-50 bg-white top-[90px] pb-[20px] w-full">
 			<div
 				className={`"h-[55px] text-[20px] p-[15px] ${
-					active === 1 ? "bg-black text-white" : "bg-white text-black"
+					paramValue === "business"
+						? "bg-black text-white"
+						: "bg-white text-black"
 				}`}
-				onClick={() => setActive(1)}
+				onClick={() => (linkClick("catalog", "business"), setBurgerOpen(false))}
 			>
 				Бизнес-сайты
 			</div>
 			<div
 				className={`"h-[55px] text-[20px] p-[15px] ${
-					active === 2 ? "bg-black text-white" : "bg-white text-black"
+					paramValue === "personal"
+						? "bg-black text-white"
+						: "bg-white text-black"
 				}`}
-				onClick={() => setActive(2)}
+				onClick={() => (linkClick("catalog", "personal"), setBurgerOpen(false))}
 			>
 				Персональные сайты
 			</div>
 			<div
 				className={`"h-[55px] text-[20px] p-[15px] ${
-					active === 3 ? "bg-black text-white" : "bg-white text-black"
+					paramValue === "shop" ? "bg-black text-white" : "bg-white text-black"
 				}`}
-				onClick={() => setActive(3)}
+				onClick={() => (linkClick("catalog", "shop"), setBurgerOpen(false))}
 			>
 				Интернет-магазины
 			</div>
 			<div
 				className={`"h-[55px] text-[20px] p-[15px] ${
-					active === 4 ? "bg-black text-white" : "bg-white text-black"
+					paramValue === "single"
+						? "bg-black text-white"
+						: "bg-white text-black"
 				}`}
-				onClick={() => setActive(4)}
+				onClick={() => (linkClick("catalog", "single"), setBurgerOpen(false))}
 			>
 				Одностраничные сайты
 			</div>
 			<div
 				className={`"h-[55px] text-[20px] p-[15px] ${
-					active === 5 ? "bg-black text-white" : "bg-white text-black"
+					paramValue === "about" ? "bg-black text-white" : "bg-white text-black"
 				}`}
-				onClick={() => setActive(5)}
+				onClick={() => linkClick("about", "about")}
 			>
 				О нас
 			</div>
