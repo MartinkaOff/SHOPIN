@@ -1,6 +1,6 @@
 import { Bestsellers } from "../../components/Bestsellers/Bestsellers";
 import { Header } from "../../components/Header/Header";
-import { TitleScreen } from "../../components/Header/TitleScreen/TitleScreen";
+import { TitleScreen } from "../../components/TitleScreen/TitleScreen";
 import { AppAttention } from "../../components/AppAttention/AppAttention";
 import { Footer } from "../../components/Footer/Footer";
 

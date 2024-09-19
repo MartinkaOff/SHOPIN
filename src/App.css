@@ -1,7 +1,0 @@
-.title32px {
-    @apply text-[32px] font-bold text-center;
-}
-  
-.wrapper {
-    @apply flex gap-[40px] justify-center flex-wrap mt-[40px];
-}

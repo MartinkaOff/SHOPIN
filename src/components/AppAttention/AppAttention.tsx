@@ -2,8 +2,8 @@ import { cards } from "../../services/appAttentions";
 
 export const AppAttention = () => {
 	return (
-		<div className="mt-[120px]">
-			<div className="title32px">
+		<div className="mt-[120px] max-[360px]:text-[20px] max-[360px]:mt-[60px]">
+			<div className="title32px ">
 				Приложение, которое заслуживает вашего внимания
 			</div>
 			<div className="flex gap-[40px] justify-center flex-wrap mt-[40px]">

@@ -30,11 +30,15 @@ export const CardsRender: React.FC<CardsRenderProps> = ({
 
 	const combinedArray = _.shuffle(quantityRender(quantity));
 	return (
-		<div className="flex gap-[40px] justify-center flex-wrap mt-[40px]">
+		<div
+			className="flex gap-[40px] justify-center flex-wrap mt-[40px]
+		
+		"
+		>
 			{combinedArray.map((card: ICard, index: number) => (
-				<div className="w-[400px]" key={index}>
+				<div className="min-[768px]:w-[400px]" key={index}>
 					<img src={card.img} alt={card.title} />
-					<p className="w-[376px] mt-[16px]">{card.title}</p>
+					<p className="min-[768px]:w-[376px] mt-[16px]">{card.title}</p>
 					<div className="flex">
 						<p>{card.price}</p>
 						{priceOld && card.priceOld ? (
