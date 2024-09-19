@@ -30,7 +30,7 @@ export const Footer = () => {
 	};
 
 	return (
-		<div className="w-full mt-[60px] min-[768px]:mt-[160px] min-[360px]:mt-[60px]">
+		<div className="w-full mt-[60px] min-[768px]:mt-[160px] min-[360px]:mt-[60px] min-[768px]:mx-[80px]">
 			<div
 				className="flex justify-between items-center
 			min-[360px]:flex-col-reverse min-[360px]:justify-center max-[768px]:flex-col-reverse max-[768px]:justify-center 
@@ -43,7 +43,7 @@ export const Footer = () => {
 				>
 					<div>
 						<img
-							className="min-[360px]:m-auto max-[768px]:m-auto"
+							className="min-[360px]:m-auto min-[768px]:m-0"
 							src={logo}
 							alt={logo}
 						/>

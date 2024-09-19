@@ -6,7 +6,7 @@ import PrimeBusiness700x500 from "../../assets/aboutImg/PrimeBusiness700x500.png
 
 export const AboutComponent = () => {
 	return (
-		<div className="w-full">
+		<div className="w-full min-[768px]:mx-[80px]">
 			<div className="text-[24px] min-[768px]:text-[62px] font-bold leading-none min-[768px]:w-[920px] mx-auto mt-[32px] min-[768px]:mt-[80px] text-center">
 				Создаем сайты, которые делают ваш бизнес успешным
 			</div>

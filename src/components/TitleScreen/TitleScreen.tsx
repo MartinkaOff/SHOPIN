@@ -1,7 +1,7 @@
 export const TitleScreen = () => {
 	return (
 		<div className="h-full min-[768px]:w-full">
-			<div className="bg-radial-gradient text-center flex flex-col items-center py-[138px] px-[16px] min-[768px]:p-[165px] ">
+			<div className="bg-radial-gradient text-center flex flex-col items-center py-[138px] px-[16px] min-[768px]:p-[165px]">
 				<div
 					className="
 					min-[768px]:w-full

@@ -24,9 +24,8 @@ export const Header = () => {
 	const linkClick = (url: string, param: string) => {
 		navigate(`/${url}?param=${param}`);
 	};
-
 	return (
-		<div className="w-full flex my-[32px] justify-between relative max-[768px]:mt-[0px] max-[768px]:mb-[32px]">
+		<div className="w-full flex my-[32px] justify-between relative max-[768px]:mt-[0px] max-[768px]:mb-[32px] min-[768px]:mx-[80px]">
 			<div className="min-[1024px]:hidden" onClick={handleBurgerOpen}>
 				<img
 					src={burgerOpen ? closeBurger : burger}

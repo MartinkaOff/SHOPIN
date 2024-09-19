@@ -30,8 +30,8 @@ export const CatalogComponent = () => {
 	};
 
 	return (
-		<div>
-			<div>
+		<div className="w-full">
+			<div className="min-[768px]:mx-[80px]">
 				<div className="title32px text-left">{paramValueText()}</div>
 				<div className="w-[541px]">
 					{`${paramValueText()} — готовые решения для создания профессиональных
